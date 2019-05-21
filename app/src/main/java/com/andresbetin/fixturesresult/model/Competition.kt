@@ -3,14 +3,13 @@ package com.andresbetin.fixturesresult.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-open class Game {
+class Competition {
 
     @SerializedName("id")
     @Expose
     val id: Long = 0
 
-    @SerializedName("type")
+    @SerializedName("name")
     @Expose
-    var type: String = ""
-
+    val name: String = ""
 }
