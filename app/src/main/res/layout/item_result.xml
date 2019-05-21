@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/result_league"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/text_header"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="Premier League"/>
+
+    <TextView
+            android:id="@+id/result_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallest_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:maxLines="1"
+            android:text="Stamford Bridge | Sep 17, 2010"/>
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+
+        <TextView
+                android:layout_weight="3"
+                android:id="@+id/result_home_team_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:textSize="@dimen/default_text_size"
+                android:textColor="@color/text_header"
+                android:textStyle="bold"
+                android:text="Arsenal"/>
+
+        <TextView
+                android:layout_weight="2"
+                android:textAlignment="textEnd"
+                android:id="@+id/result_home_team_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/text_header"
+                android:textStyle="bold"
+                android:text="Arsenal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5">
+
+        <TextView
+                android:layout_weight="3"
+                android:id="@+id/result_away_team_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:textSize="@dimen/default_text_size"
+                android:textColor="@color/text_header"
+                android:textStyle="bold"
+                android:text="Arsenal"/>
+
+        <TextView
+                android:layout_weight="2"
+                android:textAlignment="textEnd"
+                android:id="@+id/result_away_team_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/text_header"
+                android:textStyle="bold"
+                android:text="Arsenal"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/back_header"/>
+
+</LinearLayout>

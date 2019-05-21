@@ -7,17 +7,19 @@ import android.arch.lifecycle.ViewModel
 import com.andresbetin.fixturesresult.model.Resource
 import com.andresbetin.fixturesresult.model.Result
 import com.andresbetin.fixturesresult.repository.ResultRepository
+import com.andresbetin.fixturesresult.util.toTitleDate
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class ResultViewModel : ViewModel() {
 
     private val resultRepo: ResultRepository = ResultRepository()
-    private lateinit var resultData: MutableLiveData<Resource<List<Result>>>
+    private lateinit var resultData: MutableLiveData<Resource<Map<String, List<Result>>>>
 
-    fun getResults(): LiveData<Resource<List<Result>>> {
+    fun getResults(): LiveData<Resource<Map<String, List<Result>>>> {
         if (!::resultData.isInitialized) {
             resultData = MutableLiveData()
+            load()
         }
         return resultData
     }
@@ -33,10 +35,12 @@ class ResultViewModel : ViewModel() {
     }
 
     private fun onSuccess(newItems: List<Result>) {
-        this.resultData.value = Resource.success(newItems)
+        val resultItems = newItems.sortedBy { it.date }
+        val result = resultItems.groupBy { it.date.toTitleDate() }
+        this.resultData.value = Resource.success(result)
     }
 
     private fun onError(error: Throwable) {
-        this.resultData.value = Resource.error(error.message!!, mutableListOf())
+        this.resultData.value = Resource.error(error.message!!, emptyMap())
     }
 }

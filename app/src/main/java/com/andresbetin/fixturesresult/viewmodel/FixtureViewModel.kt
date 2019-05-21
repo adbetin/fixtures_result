@@ -18,6 +18,7 @@ class FixtureViewModel : ViewModel() {
     fun getFixtures(): LiveData<Resource<List<Fixture>>> {
         if (!::fixtureData.isInitialized) {
             fixtureData = MutableLiveData()
+            load()
         }
         return fixtureData
     }

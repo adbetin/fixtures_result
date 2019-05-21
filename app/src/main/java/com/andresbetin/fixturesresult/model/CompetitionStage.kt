@@ -7,7 +7,7 @@ class CompetitionStage {
 
     @SerializedName("competition")
     @Expose
-    val competition: Competition? = Competition()
+    val competition: Competition = Competition()
 
     @SerializedName("stage")
     @Expose
