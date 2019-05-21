@@ -24,8 +24,6 @@ class ResultViewModel : ViewModel() {
         return resultData
     }
 
-    fun loadResults() = load()
-
     @SuppressLint("CheckResult")
     private fun load() {
         resultRepo.getResults()

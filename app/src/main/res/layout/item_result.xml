@@ -14,8 +14,7 @@
             android:textSize="@dimen/default_text_size"
             android:textColor="@color/text_header"
             android:textStyle="bold"
-            android:textAllCaps="true"
-            android:text="Premier League"/>
+            android:textAllCaps="true"/>
 
     <TextView
             android:id="@+id/result_venue"
@@ -24,8 +23,7 @@
             android:layout_marginTop="@dimen/smallest_margin"
             android:layout_marginStart="@dimen/default_margin"
             android:layout_marginEnd="@dimen/default_margin"
-            android:maxLines="1"
-            android:text="Stamford Bridge | Sep 17, 2010"/>
+            android:maxLines="1"/>
 
     <LinearLayout
             android:layout_marginTop="@dimen/small_margin"
@@ -44,8 +42,7 @@
                 android:layout_marginEnd="@dimen/default_margin"
                 android:textSize="@dimen/default_text_size"
                 android:textColor="@color/text_header"
-                android:textStyle="bold"
-                android:text="Arsenal"/>
+                android:textStyle="bold"/>
 
         <TextView
                 android:layout_weight="2"
@@ -58,8 +55,7 @@
                 android:layout_marginEnd="@dimen/default_margin"
                 android:textSize="@dimen/big_text_size"
                 android:textColor="@color/text_header"
-                android:textStyle="bold"
-                android:text="Arsenal"/>
+                android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -80,8 +76,7 @@
                 android:layout_marginEnd="@dimen/default_margin"
                 android:textSize="@dimen/default_text_size"
                 android:textColor="@color/text_header"
-                android:textStyle="bold"
-                android:text="Arsenal"/>
+                android:textStyle="bold"/>
 
         <TextView
                 android:layout_weight="2"
@@ -94,8 +89,7 @@
                 android:layout_marginEnd="@dimen/default_margin"
                 android:textSize="@dimen/big_text_size"
                 android:textColor="@color/text_header"
-                android:textStyle="bold"
-                android:text="Arsenal"/>
+                android:textStyle="bold"/>
 
     </LinearLayout>
 

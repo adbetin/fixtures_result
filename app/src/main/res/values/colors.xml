@@ -5,5 +5,7 @@
     <color name="colorAccent">#3b14fc</color>
     <color name="back_header">#e9e7df</color>
     <color name="text_header">#110742</color>
+    <color name="red_background">#b50a0a</color>
+    <color name="white">#ffffff</color>
 
 </resources>

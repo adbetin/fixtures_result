@@ -24,7 +24,7 @@ class ListAdapter(private val items: List<ListItem>, private val context: Contex
             }
             ListItem.TYPE_FIXTURE -> {
                 val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_fixture, parent, false)
-                FixtureViewHolder(itemView)
+                FixtureViewHolder(itemView, context)
             }
             else -> {
                 val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_result, parent, false)

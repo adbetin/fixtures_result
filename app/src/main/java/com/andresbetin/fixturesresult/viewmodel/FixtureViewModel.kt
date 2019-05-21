@@ -7,23 +7,22 @@ import android.arch.lifecycle.ViewModel
 import com.andresbetin.fixturesresult.model.Fixture
 import com.andresbetin.fixturesresult.model.Resource
 import com.andresbetin.fixturesresult.repository.FixtureRepository
+import com.andresbetin.fixturesresult.util.toTitleDate
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class FixtureViewModel : ViewModel() {
 
     private val fixtureRepo: FixtureRepository = FixtureRepository()
-    private lateinit var fixtureData: MutableLiveData<Resource<List<Fixture>>>
+    private lateinit var fixtureData: MutableLiveData<Resource<Map<String, List<Fixture>>>>
 
-    fun getFixtures(): LiveData<Resource<List<Fixture>>> {
+    fun getFixtures(): LiveData<Resource<Map<String, List<Fixture>>>> {
         if (!::fixtureData.isInitialized) {
             fixtureData = MutableLiveData()
             load()
         }
         return fixtureData
     }
-
-    fun loadResult() = load()
 
     @SuppressLint("CheckResult")
     private fun load() {
@@ -34,11 +33,13 @@ class FixtureViewModel : ViewModel() {
     }
 
     private fun onSuccess(newItems: List<Fixture>) {
-        this.fixtureData.value = Resource.success(newItems)
+        val resultItems = newItems.sortedBy { it.date }
+        val result = resultItems.groupBy { it.date.toTitleDate() }
+        this.fixtureData.value = Resource.success(result)
     }
 
     private fun onError(error: Throwable) {
-        this.fixtureData.value = Resource.error(error.message!!, mutableListOf())
+        this.fixtureData.value = Resource.error(error.message!!, emptyMap())
     }
 
 }
