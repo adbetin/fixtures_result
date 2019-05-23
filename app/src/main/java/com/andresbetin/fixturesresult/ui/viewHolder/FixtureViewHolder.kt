@@ -16,8 +16,8 @@ import kotlinx.android.synthetic.main.item_fixture.view.*
 class FixtureViewHolder(val view: View, val context: Context) : RecyclerView.ViewHolder(view) {
     fun onBind(fixture: Fixture) {
         view.fixture_league.text = fixture.competitionStage.competition.name
-        view.fixture_venue_stadium.text = fixture.venue.name
-        view.fixture_venue_date.text = "| ${fixture.date.toVenueDate()}"
+        view.fixture_venue_stadium.text = "${fixture.venue.name} |"
+        view.fixture_venue_date.text = fixture.date.toVenueDate()
 
         view.fixture_home_team_name.text = fixture.homeTeam.name
         view.fixture_away_team_name.text = fixture.awayTeam.name
