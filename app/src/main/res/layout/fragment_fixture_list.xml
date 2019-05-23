@@ -15,8 +15,7 @@
             android:id="@+id/fixture_filter_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:background="@color/button_background"
+            android:layout_gravity="top|end"
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@android:drawable/ic_menu_search"/>
 
@@ -25,9 +24,8 @@
             android:id="@+id/fixture_filter_close_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
+            android:layout_gravity="top|end"
             android:layout_margin="@dimen/fab_margin"
-            android:background="@color/button_background"
             app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"/>
 
 </android.support.design.widget.CoordinatorLayout>
